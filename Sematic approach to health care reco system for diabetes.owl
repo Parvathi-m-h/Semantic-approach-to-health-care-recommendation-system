@@ -1,0 +1,2229 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/hedathri/ontologies/2016/9/untitled-ontology-6"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/hedathri/ontologies/2016/9/untitled-ontology-6">
+    <Prefix name="" IRI="http://www.semanticweb.org/hedathri/ontologies/2016/9/untitled-ontology-6#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="thess" IRI="http://www.semanticweb.org/hedathri/ontologies/2016/9/untitled-ontology-6#"/>
+    <Prefix name="questionnaire" IRI="http://www.semanticweb.org/questionnaire#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string"> Model used to improve patient primary care at home</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Diabetes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recommendation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vital-sign-Examination"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#bloodglucose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#bodymass-index"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#diabete-examination"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#diabetes-questionnaire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#diseases"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#doctor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#drinks"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#externalStimula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#food"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#insuline-intake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#medication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#nutrition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasDisease"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasExamination"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasInsuline-intake"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasMedication"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasQuestion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Hasanswer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Hasdietintake"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsAnswerof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsDiseaseOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsExternalstimulaOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsexamOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#filledby"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelationTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haschoice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isoptionof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="questionnaire:IsQuestionnaireof"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasselectedAnswer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="questionnaire:isQuestionOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasExaminationsDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasGender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasGlucosevalue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasQuantity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasRange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#HasTelephone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Hasbodymassindex"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Haslocation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#100-150PMOL/L"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1spoon_of_sugar_or_honey"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#200-250PMOL/L"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#30PMOL/L"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#50pmol/l"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Acarbose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dextrose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Food"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Glucagen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Glucophage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Glyset_or_Precose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hyperstat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Januvia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lean_meat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metformin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Parvathi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Starlix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sulfonylurea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thiazolidinediones"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answeredQuestionnaire9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq22"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq23"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq24"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq25"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#answerq26"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#diabete"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#drinks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fish"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#food"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fruit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fruit_juice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#glucoseExam9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#highglucoselevel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#insuline"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#legumes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#medication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#milk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#namy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rama"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sneha"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#soft_drink"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sport"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vegetable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#water"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#HasDisease"/>
+            <Class IRI="#diseases"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#HasExamination"/>
+            <Class IRI="#Vital-sign-Examination"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#HasQuestionnaire"/>
+            <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vital-sign-Examination"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#HasExternalstimula"/>
+            <Class IRI="#externalStimula"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vital-sign-Examination"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#HasInsuline-intake"/>
+            <Class IRI="#insuline-intake"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#diseases"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#IsDiseaseOf"/>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isoptionof"/>
+            <Class abbreviatedIRI="questionnaire:Question"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isoptionof"/>
+            <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+            <Class abbreviatedIRI="questionnaire:OptionList"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="questionnaire:isQuestionOf"/>
+            <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#Hasanswer"/>
+            <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Hasanswer"/>
+            <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Diabetes"/>
+        <Class IRI="#diseases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bloodglucose"/>
+        <Class IRI="#diabete-examination"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#bodymass-index"/>
+        <Class IRI="#diabete-examination"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#diabete-examination"/>
+        <Class IRI="#Vital-sign-Examination"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#doctor"/>
+        <Class IRI="#person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#drinks"/>
+        <Class IRI="#nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#food"/>
+        <Class IRI="#nutrition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#insuline-intake"/>
+        <Class IRI="#Recommendation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#medication"/>
+        <Class IRI="#Recommendation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#medication"/>
+        <Class IRI="#externalStimula"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#nutrition"/>
+        <Class IRI="#Recommendation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#nutrition"/>
+        <Class IRI="#externalStimula"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+        <Class IRI="#diabetes-questionnaire"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <Class IRI="#diabetes-questionnaire"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <Class IRI="#diabetes-questionnaire"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <Class IRI="#diabetes-questionnaire"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#insuline-intake"/>
+        <NamedIndividual IRI="#100-150PMOL/L"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#1spoon_of_sugar_or_honey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#insuline-intake"/>
+        <NamedIndividual IRI="#200-250PMOL/L"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#insuline-intake"/>
+        <NamedIndividual IRI="#30PMOL/L"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#insuline-intake"/>
+        <NamedIndividual IRI="#50pmol/l"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Acarbose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Dextrose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Glucagen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Glucophage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Glyset_or_Precose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Hyperstat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Januvia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#Lean_meat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Metformin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Parvathi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Starlix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#medication"/>
+        <NamedIndividual IRI="#Sulfonylurea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+        <NamedIndividual IRI="#answeredQuestionnaire9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq25"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+        <NamedIndividual IRI="#answerq26"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Diabetes"/>
+        <NamedIndividual IRI="#diabete"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#diseases"/>
+        <NamedIndividual IRI="#diabete"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#externalStimula"/>
+        <NamedIndividual IRI="#drinks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#fish"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#externalStimula"/>
+        <NamedIndividual IRI="#food"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#fruit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#fruit_juice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vital-sign-Examination"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#legumes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#externalStimula"/>
+        <NamedIndividual IRI="#medication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#milk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#namy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#rama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#sneha"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#soft_drink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#externalStimula"/>
+        <NamedIndividual IRI="#sport"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#externalStimula"/>
+        <NamedIndividual IRI="#stress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#vegetable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#nutrition"/>
+        <NamedIndividual IRI="#water"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasInsuline-intake"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+        <NamedIndividual IRI="#50pmol/l"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+        <NamedIndividual IRI="#Lean_meat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+        <NamedIndividual IRI="#legumes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasDisease"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <NamedIndividual IRI="#diabete"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <NamedIndividual IRI="#answeredQuestionnaire3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#answerq12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:IsQuestionnaireof"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+        <NamedIndividual IRI="#Parvathi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire10"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual IRI="#answeredQuestionnaire2"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire2"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire3"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire4"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire5"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire6"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire7"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire8"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#answeredQuestionnaire9"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq11"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq11"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq12"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq12"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq13"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq13"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq14"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq14"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq15"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq15"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq16"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq16"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq17"/>
+        <NamedIndividual IRI="#7._I_do_regular_physical_activity_to_achieve_optimal_blood_sugar_levels"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq17"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsAnswerof"/>
+        <NamedIndividual IRI="#answerq18"/>
+        <NamedIndividual IRI="#8._I_strictly_follow_the_dietary_recommendations_given_by_my_doctor_or_diabetes_specialist"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq18"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq21"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq22"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq23"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haschoice"/>
+        <NamedIndividual IRI="#answerq24"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasanswer"/>
+        <NamedIndividual IRI="#answerq26"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+        <NamedIndividual IRI="#Food"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+        <NamedIndividual IRI="#Parvathi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRelationTo"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+        <NamedIndividual IRI="#answeredQuestionnaire1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+        <NamedIndividual IRI="#stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+        <NamedIndividual IRI="#namy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+        <NamedIndividual IRI="#sport"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+        <NamedIndividual IRI="#food"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+        <NamedIndividual IRI="#Parvathi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+        <NamedIndividual IRI="#insuline"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+        <NamedIndividual IRI="#food"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+        <NamedIndividual IRI="#food"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+        <NamedIndividual IRI="#stress"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+        <NamedIndividual IRI="#sneha"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+        <NamedIndividual IRI="#namy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+        <NamedIndividual IRI="#food"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+        <NamedIndividual IRI="#rama"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasInsuline-intake"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#200-250PMOL/L"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#Sulfonylurea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#Thiazolidinediones"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#Starlix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#Acarbose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#Glyset_or_Precose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#Lean_meat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#legumes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#fruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#water"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#vegetable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasInsuline-intake"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#30PMOL/L"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#Glucagen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#Dextrose"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasMedication"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#Hyperstat"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#soft_drink"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#fruit_juice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#1spoon_of_sugar_or_honey"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasDisease"/>
+        <NamedIndividual IRI="#namy"/>
+        <NamedIndividual IRI="#diabete"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual IRI="#namy"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual IRI="#namy"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual IRI="#namy"/>
+        <NamedIndividual IRI="#answeredQuestionnaire10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual IRI="#namy"/>
+        <NamedIndividual IRI="#answeredQuestionnaire8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual IRI="#rama"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual IRI="#rama"/>
+        <NamedIndividual IRI="#answeredQuestionnaire9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasDisease"/>
+        <NamedIndividual IRI="#sneha"/>
+        <NamedIndividual IRI="#diabete"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual IRI="#sneha"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual IRI="#sneha"/>
+        <NamedIndividual IRI="#answeredQuestionnaire7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:1.I_check_my_blood_sugar_levels_with_care_and_attention"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:2.The_food_I_choose_to_eat_makes_it_easy_to_achieve_optimal_blood_sugar_levels"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:3._I_keep_all_doctors’_appointments_recommended_for_my_diabetes_treatment."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:5.Occasionally_I_eat_lots_of_sweets_or_other_foods_rich_in_carbohydrates"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_a_consider-able_degree"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:6._I_record_my_blood_sugar_levels_regularly_antibiotics_or_steroids_at_the_moment"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_very_much"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Applies_to_me_to_some_degree"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasselectedAnswer"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:Does_not_apply_to_me"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:4._I_take_my_diabetes_medication_(e._g._insulin,_tablets)_as_prescribed."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasDisease"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <NamedIndividual IRI="#diabete"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <NamedIndividual IRI="#answeredQuestionnaire6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <NamedIndividual IRI="#answeredQuestionnaire5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasDisease"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <NamedIndividual IRI="#diabete"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasExamination"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <NamedIndividual IRI="#answeredQuestionnaire2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <NamedIndividual IRI="#answeredQuestionnaire4"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasRange"/>
+        <NamedIndividual IRI="#NormalGlucoseLevel"/>
+        <Literal datatypeIRI="&xsd;string">4-6.9Mmol</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasAge"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <Literal datatypeIRI="&xsd;int">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGender"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <Literal datatypeIRI="&xsd;string">female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasTelephone"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <Literal datatypeIRI="&xsd;integer">123456789</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Haslocation"/>
+        <NamedIndividual IRI="#Parvathi"/>
+        <Literal datatypeIRI="&xsd;string">Mangalore</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+        <Literal datatypeIRI="&xsd;dateTime">31/10/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+        <Literal datatypeIRI="&xsd;string">3mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam1"/>
+        <Literal datatypeIRI="&xsd;float">29.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+        <Literal datatypeIRI="&xsd;dateTime">1/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+        <Literal datatypeIRI="&xsd;string">7mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam10"/>
+        <Literal datatypeIRI="&xsd;float">25.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+        <Literal datatypeIRI="&xsd;dateTime">6/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+        <Literal datatypeIRI="&xsd;string">8mmo/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam2"/>
+        <Literal datatypeIRI="&xsd;float">25.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+        <Literal datatypeIRI="&xsd;dateTime">7/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+        <Literal datatypeIRI="&xsd;string">4mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam3"/>
+        <Literal datatypeIRI="&xsd;float">19.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+        <Literal datatypeIRI="&xsd;dateTime">8/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+        <Literal datatypeIRI="&xsd;string">4.5mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam4"/>
+        <Literal datatypeIRI="&xsd;float">17.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+        <Literal datatypeIRI="&xsd;dateTime">9/11/2016
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+        <Literal datatypeIRI="&xsd;string">5mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam5"/>
+        <Literal datatypeIRI="&xsd;float">23.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+        <Literal datatypeIRI="&xsd;dateTime">9/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+        <Literal datatypeIRI="&xsd;string">5.5mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam6"/>
+        <Literal datatypeIRI="&xsd;float">21.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+        <Literal datatypeIRI="&xsd;dateTime">11/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+        <Literal datatypeIRI="&xsd;string">6.5mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam7"/>
+        <Literal datatypeIRI="&xsd;float">25.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+        <Literal datatypeIRI="&xsd;dateTime">1/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+        <Literal datatypeIRI="&xsd;string">7.7mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam8"/>
+        <Literal datatypeIRI="&xsd;float">28.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasExaminationsDate"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+        <Literal datatypeIRI="&xsd;dateTime">10/11/2016</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+        <Literal datatypeIRI="&xsd;string">6.5mmol/l</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Hasbodymassindex"/>
+        <NamedIndividual IRI="#glucoseExam9"/>
+        <Literal datatypeIRI="&xsd;float">30.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasQuantity"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <Literal datatypeIRI="&xsd;string">10grams</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasRange"/>
+        <NamedIndividual IRI="#highglucoselevel"/>
+        <Literal datatypeIRI="&xsd;string">7-20Mmol</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasQuantity"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <Literal datatypeIRI="&xsd;string">15-20grams</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasRange"/>
+        <NamedIndividual IRI="#lowglucoselevel"/>
+        <Literal datatypeIRI="&xsd;string">1-3.9Mmol</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasAge"/>
+        <NamedIndividual IRI="#namy"/>
+        <Literal datatypeIRI="&xsd;int">32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGender"/>
+        <NamedIndividual IRI="#namy"/>
+        <Literal datatypeIRI="&xsd;string">female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasTelephone"/>
+        <NamedIndividual IRI="#namy"/>
+        <Literal datatypeIRI="&xsd;integer">987654321</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Haslocation"/>
+        <NamedIndividual IRI="#namy"/>
+        <Literal datatypeIRI="&xsd;string">Bangalore</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasAge"/>
+        <NamedIndividual IRI="#rama"/>
+        <Literal datatypeIRI="&xsd;int">34</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGender"/>
+        <NamedIndividual IRI="#rama"/>
+        <Literal datatypeIRI="&xsd;string">female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasTelephone"/>
+        <NamedIndividual IRI="#rama"/>
+        <Literal datatypeIRI="&xsd;integer">112233445</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Haslocation"/>
+        <NamedIndividual IRI="#rama"/>
+        <Literal datatypeIRI="&xsd;string">Hubli</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasAge"/>
+        <NamedIndividual IRI="#sneha"/>
+        <Literal datatypeIRI="&xsd;int">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGender"/>
+        <NamedIndividual IRI="#sneha"/>
+        <Literal datatypeIRI="&xsd;string">female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasTelephone"/>
+        <NamedIndividual IRI="#sneha"/>
+        <Literal datatypeIRI="&xsd;integer">33344455566</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Haslocation"/>
+        <NamedIndividual IRI="#sneha"/>
+        <Literal datatypeIRI="&xsd;string">dharwad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasAge"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <Literal datatypeIRI="&xsd;int">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGender"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <Literal datatypeIRI="&xsd;string">female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasTelephone"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <Literal datatypeIRI="&xsd;integer">6655443322</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Haslocation"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:ria"/>
+        <Literal datatypeIRI="&xsd;string">udupi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasAge"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <Literal datatypeIRI="&xsd;int">29</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasGender"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <Literal datatypeIRI="&xsd;string">female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#HasTelephone"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <Literal datatypeIRI="&xsd;integer">987654333</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Haslocation"/>
+        <NamedIndividual abbreviatedIRI="questionnaire:sree"/>
+        <Literal datatypeIRI="&xsd;string">Mangalore</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#IsDiseaseOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#IsExternalstimulaOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#IsExternalstimulaOf"/>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <ObjectProperty IRI="#IsglucoselevelOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="questionnaire:IsQuestionnaireof"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <Class IRI="#Vital-sign-Examination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasGlucoselevel"/>
+        <Class IRI="#Vital-sign-Examination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasInsuline-intake"/>
+        <Class IRI="#Vital-sign-Examination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasQuestion"/>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#HasQuestionnaire"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsDiseaseOf"/>
+        <Class IRI="#diseases"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsExternalstimulaOf"/>
+        <Class IRI="#externalStimula"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <Class IRI="#Vital-sign-Examination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#filledby"/>
+        <Class IRI="#Vital-sign-Examination"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isoptionof"/>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="questionnaire:IsQuestionnaireof"/>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasselectedAnswer"/>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="questionnaire:isQuestionOf"/>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasExternalstimula"/>
+        <Class IRI="#externalStimula"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasInsuline-intake"/>
+        <Class IRI="#insuline-intake"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#HasMedication"/>
+        <Class IRI="#medication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Hasdietintake"/>
+        <Class IRI="#nutrition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsExternalstimulaOf"/>
+        <Class IRI="#Vital-sign-Examination"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsexamOf"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#filledby"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isoptionof"/>
+        <Class abbreviatedIRI="questionnaire:Question"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="questionnaire:IsQuestionnaireof"/>
+        <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasOption"/>
+        <Class abbreviatedIRI="questionnaire:OptionList"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="questionnaire:hasselectedAnswer"/>
+        <Class abbreviatedIRI="questionnaire:questionAnswer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="questionnaire:isQuestionOf"/>
+        <Class abbreviatedIRI="questionnaire:questionnaire"/>
+    </ObjectPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#HasGlucosevalue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+
